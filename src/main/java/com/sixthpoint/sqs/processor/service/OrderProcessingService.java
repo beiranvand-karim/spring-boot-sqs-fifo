@@ -36,7 +36,7 @@ public class OrderProcessingService {
             String pendingOrderJson = configProperties.getObjectMapper().writeValueAsString(pendingOrder);
 
             final AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
-            sqs.sendMessage(new SendMessageRequest(configProperties.getSqsURL(), pendingOrderJson).withMessageGroupId("exampleGroupId1"));
+            sqs.sendMessage(new SendMessageRequest(configProperties.getSqsURL(), pendingOrderJson).withMessageGroupId("sixthpointGroupId"));
 
         } catch (final AmazonClientException | JsonProcessingException ase) {
             log.error("Error Message: " + ase.getMessage());
@@ -44,7 +44,7 @@ public class OrderProcessingService {
     }
 
     @SqsListener("PendingOrders.fifo")
-    public void listen(String json) throws IOException {
+    public void process(String json) throws IOException {
         PendingOrder pendingOrder = configProperties.getObjectMapper().readValue(json, PendingOrder.class);
         if(availableItems > 0 && availableItems >= pendingOrder.getItemCount()) {
             availableItems = availableItems - pendingOrder.getItemCount();
