@@ -1,0 +1,10 @@
+cloud:
+  aws:
+    stack:
+      auto: false
+    credentials:
+      access-key: # Enter your key here
+      secret-key: # Enter your key here
+      use-default-aws-credentials-chain: true #Pull from environment vars or ~/.aws/credentials file.
+    region:
+      static: us-east-1
