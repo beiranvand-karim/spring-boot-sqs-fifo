@@ -10,6 +10,6 @@ public class ConfigProperties {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    private String sqsURL = "https://sqs.us-east-1.amazonaws.com/588513328091/PendingOrders.fifo";
+    private String sqsURL = "YOUR_QUEUE_URL";
 
 }
