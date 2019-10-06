@@ -4,12 +4,26 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@Data
 @ConfigurationProperties(prefix = "sixthpoint")
 public class ConfigProperties {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    private String sqsURL = "YOUR_QUEUE_URL";
+    private String sqsURL = "https://sqs.eu-west-1.amazonaws.com/145549860468/PendingOrders.fifo";
 
+    public ObjectMapper getObjectMapper() {
+        return objectMapper;
+    }
+
+    public void setObjectMapper(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
+    }
+
+    public String getSqsURL() {
+        return sqsURL;
+    }
+
+    public void setSqsURL(String sqsURL) {
+        this.sqsURL = sqsURL;
+    }
 }

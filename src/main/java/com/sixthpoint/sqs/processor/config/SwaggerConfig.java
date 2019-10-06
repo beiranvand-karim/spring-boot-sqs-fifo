@@ -40,9 +40,9 @@ public class SwaggerConfig {
                 .version("1.0.0")
                 .licenseUrl("")
                 .license("")
-                .contact(new Contact("Brandon Klimek",
+                .contact(new Contact("Karim Beiranvand",
                         "https://sixthpoint.com",
-                        "sixthpoint@gmail.com"))
+                        "beiranvand.karim@gmail.com"))
                 .build();
     }
 

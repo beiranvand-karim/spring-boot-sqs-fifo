@@ -1,0 +1,10 @@
+cloud:
+  aws:
+    stack:
+      auto: false
+    credentials:
+      access-key: AKIAIEWXTFFDFDGRGR4YG4ISKCQ6Q
+      secret-key: 1DU2Fyi0tE9dfgdsfDFdfgdgKHzndgdDssfKOhXWKSc+IfrzDGKq/Oyim2n2
+      use-default-aws-credentials-chain: true
+    region:
+      static: eu-west-1

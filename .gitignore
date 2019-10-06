@@ -1,0 +1,9 @@
+
+# config file secrets and access keys
+src/main/resources/application.yml
+
+# idea IDE files
+.idea
+
+# build files
+target
